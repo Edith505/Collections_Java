@@ -4,32 +4,38 @@ public class ExerciceCollection {
     public static final int NOMBRE_ITERATIONS = 1000000;
 
 
-    public void add(Integer... vals){
+    public void add(Integer... vals) {
 
     }
 
     public static void main(String[] args) {
 
         System.out.println("Initialisation");
-
-
         //Construction et initialisation de liste
         {
             //Avec instanciation
             //TODO 1 Créer une liste qui contient les nombres 1, 2 et 3 dans une variable nommée liste1.
-
+            Collection<Integer> liste1 = new ArrayList<>();
+            liste1.add(1);
+            liste1.add(2);
+            liste1.add(3);
 
             //TODO 2 Afficher le contenu de la variable liste1.
-
+            System.out.println("--------------/ TODO 2 /---------------");
+            for (Integer i : liste1) {
+                System.out.println(i);
+            }
+            System.out.println("liste1:" + liste1);
 
             //TODO 3 Créer une liste2 qui contient les éléments 1,2,3, et 4 à l'aide de la méthode Arrays.asList()
             //( ou List.of())
-
-
-//            System.out.println("liste2:" + liste2);
+            System.out.println("--------------/ TODO 3 /---------------");
+            Collection<Integer> liste2 = Arrays.asList(1, 2, 3, 4);
+            System.out.println("liste2:" + liste2);
 
             //TODO 4 Essayer d'ajouter un élément à cette liste. Expliquer le résultat?
-
+            System.out.println("--------------/ TODO 4 /---------------");
+            System.out.println("liste2.add(5) : échoue avec une UnsupportedOperationException parce que Arrays.asList() retourne une liste de taille fixe." + liste2);
 
             //Créer une Collection avec une autre Collection
             //TODO 5 Créer une liste3 à partir de l'objet liste1. On peut créer une collection à partir du
@@ -44,7 +50,6 @@ public class ExerciceCollection {
 
 
 //            System.out.println("liste4:" + liste4);
-
 
 
             //Avec des objets de type Personne
@@ -84,7 +89,6 @@ public class ExerciceCollection {
 
             //TODO 10 Retirer le 5 de la liste 1. Si l'élément a été retiré afficher "L'élément 5 été retiré "
             // sinon afficher "aucun élément n'a été retiré ". Dans les 2 cas afficher la liste1.
-
 
 
             System.out.println("on retire le troisième élément " + liste1);
@@ -138,15 +142,10 @@ public class ExerciceCollection {
             //TODO 16 À partir d'un objet Iterator,  calculer la moyenne des nombres
 
 
-
-
-
 //            System.out.println("La moyenne est: " + moyenne);
 
             //On retire tous les nombres négatifs
             //TODO 17 À partir d'un objet Iterator, retirer tous les nombres négatifs de la collection
-
-
 
 
             System.out.println("La liste sans nombre négatif" + liste);
@@ -164,7 +163,6 @@ public class ExerciceCollection {
             int nombrePersonneMajeure = 0;
             //TODO 18 En utilisant un boucle for accélérée (aussi appelée foreach), compter les personnes
             // qui sont majeures dans listePersonne.
-
 
 
             System.out.println("Il y a " + nombrePersonneMajeure + " personnes majeures");
