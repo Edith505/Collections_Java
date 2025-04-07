@@ -16,49 +16,44 @@ public class ExerciceCollection {
             //Avec instanciation
             //TODO 1 Créer une liste qui contient les nombres 1, 2 et 3 dans une variable nommée liste1.
             Collection<Integer> liste1 = new ArrayList<>();
-            liste1.add(1);
-            liste1.add(2);
-            liste1.add(3);
+
 
             //TODO 2 Afficher le contenu de la variable liste1.
             System.out.println("--------------/ TODO 2 /---------------");
-            for (Integer i : liste1) {
-                System.out.println(i);
-            }
+
             System.out.println("liste1:" + liste1);
 
             //TODO 3 Créer une liste2 qui contient les éléments 1,2,3, et 4 à l'aide de la méthode Arrays.asList()
             //( ou List.of())
             System.out.println("--------------/ TODO 3 /---------------");
-            Collection<Integer> liste2 = Arrays.asList(1, 2, 3, 4);
-            System.out.println("liste2:" + liste2);
+
+            // System.out.println("liste2:" + liste2);
 
             //TODO 4 Essayer d'ajouter un élément à cette liste. Expliquer le résultat?
             System.out.println("--------------/ TODO 4 /---------------");
-            System.out.println("liste2.add(5) : échoue avec une UnsupportedOperationException parce que Arrays.asList() retourne une liste de taille fixe." + liste2);
+            // System.out.println("liste2.add(5) : échoue avec une UnsupportedOperationException parce que Arrays.asList() retourne une liste de taille fixe." + liste2);
 
             //Créer une Collection avec une autre Collection
             //TODO 5 Créer une liste3 à partir de l'objet liste1. On peut créer une collection à partir du
             // contenu de n'importe quelle autre collection. Toutes les collections ont un constructeur
             // qui reçoit un object de type Collection en paramètre!
             System.out.println("--------------/ TODO 5 /---------------");
-            Collection<Integer> liste3 = new ArrayList<>(liste1);
-            System.out.println("liste3:" + liste3);
+
+            // System.out.println("liste3:" + liste3);
 
             //À l'aide d'un tableau statique
             //TODO 6 Créer une liste4 à partir du tableau static suivant en utilisant
             // la méthode asList de la classe utilitaire Arrays voir l'API https://docs.oracle.com/javase/8/docs/api/.
             System.out.println("--------------/ TODO 6 /---------------");
             Integer[] tab = new Integer[]{1, 2, 3};// ATTENTION  : Interger[] et non int[] !!!
-            Collection<Integer> liste4 = Arrays.asList(tab);
-            System.out.println("liste4:" + liste4);
+
+            // System.out.println("liste4:" + liste4);
 
             //Avec des objets de type Personne
             //TODO 7 Créer une liste5 qui contient 2 instances de Personne.
             System.out.println("--------------/ TODO 7 /---------------");
             Collection<Personne> liste5 = new ArrayList<>();
-            liste5.add(new Personne("Rakoto", 1));
-            liste5.add(new Personne("Rakoto", 2, 25));
+
             System.out.println("liste5:" + liste5);
 
         }
@@ -73,9 +68,9 @@ public class ExerciceCollection {
                 // nombre 9
                 System.out.println("--------------/ TODO 8 /---------------");
                 Collection<Integer> liste3 = new ArrayList<>(liste1);
-                liste3.addAll(liste2);
-                liste3.add(9);
+
                 System.out.println("liste3:" + liste3);
+
             }
 
         }
@@ -90,27 +85,27 @@ public class ExerciceCollection {
             //TODO 9 Retirer le 2 de la liste 1. Si l'élément a été retiré afficher "L'élément 2 été retiré "
             // sinon afficher "aucun élément n'a été retiré ". Dans les 2 cas afficher la liste1.
             System.out.println("--------------/ TODO 9 /---------------");
-            if (liste1.remove(2)) {
-                System.out.println("L'élément 2 été retiré");
-            } else {
-                System.out.println("aucun élément n'a été retiré");
-            }
+
+            System.out.println("L'élément 2 été retiré");
+
+            System.out.println("aucun élément n'a été retiré");
+
             System.out.println("liste1 après retrait:" + liste1);
 
             //TODO 10 Retirer le 5 de la liste 1. Si l'élément a été retiré afficher "L'élément 5 été retiré "
             // sinon afficher "aucun élément n'a été retiré ". Dans les 2 cas afficher la liste1.
             System.out.println("--------------/ TODO 10 /---------------");
-            if (liste1.remove(5)) {
-                System.out.println("L'élément 5 été retiré");
-            } else {
-                System.out.println("aucun élément n'a été retiré");
-            }
+
+            System.out.println("L'élément 5 été retiré");
+
+            System.out.println("aucun élément n'a été retiré");
+
             System.out.println("on retire le troisième élément liste1 : " + liste1);
 
             // on peut vider la collection avec clear
             //TODO 11 vider le contenu de la collection liste1
             System.out.println("--------------/ TODO 11 /---------------");
-            liste1.clear();
+
             System.out.println("liste1 est vide " + liste1);
 
             //On peut également enlever les éléments d'une collectionqui sont dans une autre collection
@@ -120,7 +115,6 @@ public class ExerciceCollection {
             //TODO 12 retirer tous les éléments de la liste1 qui sont dans la liste2.
             // (regarder bien l'API c'est très simple!)
             System.out.println("--------------/ TODO 12 /---------------");
-            liste1.removeAll(liste2);
 
             System.out.println("Les éléments de liste1 qui sont dans liste2 ont été retirés " + liste1);
 
@@ -159,24 +153,14 @@ public class ExerciceCollection {
             Collection<Integer> liste = new ArrayList<>(Arrays.asList(1, 4, 2, 6, 5, -5, 3, 5, -9, 4, 2, -3, 5));
             //TODO 16 À partir d'un objet Iterator,  calculer la moyenne des nombres
             System.out.println("--------------/ TODO 16 /---------------");
-            int moyenne = 0;
-            int somme = 0;
-            Iterator<Integer> iterator = liste.iterator();
-            while (iterator.hasNext()) {
-                somme += iterator.next();
-            }
-            moyenne = somme / liste.size();
-            System.out.println("La moyenne est: " + moyenne);
+
+
+            //stem.out.println("La moyenne est: " + moyenne);
 
             //On retire tous les nombres négatifs
             //TODO 17 À partir d'un objet Iterator, retirer tous les nombres négatifs de la collection
             System.out.println("--------------/ TODO 17 /---------------");
-            Iterator<Integer> iterator2 = liste.iterator();
-            while (iterator2.hasNext()) {
-                if (iterator2.next() < 0) {
-                    iterator2.remove();
-                }
-            }
+
             System.out.println("La liste sans nombre négatif" + liste);
 
             //for accéléré
@@ -193,11 +177,7 @@ public class ExerciceCollection {
             //TODO 18 En utilisant un boucle for accélérée (aussi appelée foreach), compter les personnes
             // qui sont majeures dans listePersonne.
             System.out.println("--------------/ TODO 18 /---------------");
-            for (Personne personne : listePersonne) {
-                if (personne.getAge() >= 18) {
-                    nombrePersonneMajeure++;
-                }
-            }
+
             System.out.println("Il y a " + nombrePersonneMajeure + " personnes majeures");
 
 
