@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Personne implements Comparable<Personne>{
     String name;
     int numeroID;
@@ -48,7 +50,13 @@ public class Personne implements Comparable<Personne>{
                 '}';
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Personne personne = (Personne) o;
+        return numeroID == personne.numeroID && Objects.equals(name, personne.name);
+    }
 
     @Override
     public int hashCode() {
